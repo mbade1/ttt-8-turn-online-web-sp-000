@@ -18,6 +18,6 @@ def valid_move?(board, index)
   return false
 end
 
-def position_taken
-  if 
+def position_taken(board, index)
+  if board
 end
