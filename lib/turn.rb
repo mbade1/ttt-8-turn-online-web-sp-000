@@ -31,9 +31,13 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  index = gets.strip
+  index = gets.chomp
+  index = input_to_index(input)
   if valid_move?(board, index)
     move(board, index)
+    puts display_board(board)
   else 
-    
+    puts "That is an invalid entry!"
+    turn(board)
+  end
 end
